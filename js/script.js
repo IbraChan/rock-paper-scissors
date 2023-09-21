@@ -1,4 +1,4 @@
-function getComputerChoise() {
+function getComputerChoice() {
   // get a random number between 1 and 3
   const randomNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
   // console.log(getRandomNumber);
@@ -12,13 +12,13 @@ function getComputerChoise() {
 }
 
 function takeUserChoise() {
-  const playerChoise = prompt("Enter Your Choise:");
-  return playerChoise.toLocaleLowerCase();
+  const playerChoice = prompt("Enter Your Choise:");
+  return playerChoice.toLowerCase();
 }
 
 function playRound(playerSelection, computerSelection) {
     playerSelection = takeUserChoise();
-    computerSelection = getComputerChoise();
+    computerSelection = getComputerChoice();
   if (playerSelection == "paper" && computerSelection == "rock") {
     return `You won! ${playerSelection} beats ${computerSelection}! keep going!`;
   }
