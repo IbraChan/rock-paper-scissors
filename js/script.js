@@ -2,9 +2,9 @@ function getComputerChoice() {
   // get a random number between 1 and 3
   const randomNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
   // console.log(getRandomNumber);
-  if (randomNumber == 1) {
+  if (randomNumber === 1) {
     return "rock";
-  } else if (randomNumber == 2) {
+  } else if (randomNumber === 2) {
     return "paper";
   } else {
     return "scissors";
@@ -19,22 +19,22 @@ function takeUserChoise() {
 function playRound(playerSelection, computerSelection) {
     playerSelection = takeUserChoise();
     computerSelection = getComputerChoice();
-  if (playerSelection == "paper" && computerSelection == "rock") {
+  if (playerSelection === "paper" && computerSelection === "rock") {
     return `You won! ${playerSelection} beats ${computerSelection}! keep going!`;
   }
-  if (playerSelection == "rock" && computerSelection == "scissors") {
+  if (playerSelection === "rock" && computerSelection === "scissors") {
     return `You won! ${playerSelection} beats ${computerSelection}! keep going!`;
   }
-  if (playerSelection == "scissors" && computerSelection == "paper") {
+  if (playerSelection === "scissors" && computerSelection === "paper") {
     return `You won! ${playerSelection} beats ${computerSelection}! keep going!`;
   }
-  if (playerSelection == "rock" && computerSelection == "paper") {
+  if (playerSelection === "rock" && computerSelection === "paper") {
     return `You lost :( ${computerSelection} beats ${playerSelection}! Try Again!`;
   }
-  if (playerSelection == "scissors" && computerSelection == "rock") {
+  if (playerSelection === "scissors" && computerSelection === "rock") {
     return `You lost :( ${computerSelection} beats ${playerSelection}! Try Again!`;
   }
-  if (playerSelection == "paper" && computerSelection == "scissors") {
+  if (playerSelection === "paper" && computerSelection === "scissors") {
     return `You lost :( ${computerSelection} beats ${playerSelection}! Try Again!`;
   }
   return "It is a tie! Keep Going!";
@@ -56,7 +56,7 @@ function game() {
             console.log("it is a tie! try again!")
         }
     }
-    if (playerWins == 5) {
+    if (playerWins === 5) {
         return "You Won the whole game!"
     }
     else {
