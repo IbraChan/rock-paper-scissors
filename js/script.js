@@ -1,13 +1,14 @@
 function getComputerChoice() {
   // get a random number between 1 and 3
   const randomNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
-  // console.log(getRandomNumber);
-  if (randomNumber === 1) {
-    return "rock";
-  } else if (randomNumber === 2) {
-    return "paper";
-  } else {
-    return "scissors";
+  // console.log(randomNumber);
+  switch(randomNumber) {
+    case 1:
+     return "rock";
+    case 2:
+     return "paper";
+    case 3:
+     return "scissors";
   }
 }
 
