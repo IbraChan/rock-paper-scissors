@@ -41,22 +41,22 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    let i = 1, j = 1; 
-    while (i <= 5 && j <= 5) {
+    let playerWins = 0, computerWins = 0; 
+    while (playerWins < 5 && computerWins < 5) {
         roundResult = playRound();
         if (roundResult.includes("won")) {
             console.log(roundResult);
-            i++
+            playerWins++
         }
         else if (roundResult.includes("lost")) {
             console.log(roundResult);
-            j++;
+            computerWins++;
         }
         else {
             console.log("it is a tie! try again!")
         }
     }
-    if (i == 5) {
+    if (playerWins == 5) {
         return "You Won the whole game!"
     }
     else {
