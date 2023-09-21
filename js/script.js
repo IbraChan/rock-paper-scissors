@@ -17,9 +17,9 @@ function takeUserChoise() {
   return playerChoice.toLowerCase();
 }
 
-function playRound(playerSelection, computerSelection) {
-    playerSelection = takeUserChoise();
-    computerSelection = getComputerChoice();
+function playRound() {
+    const playerSelection = takeUserChoise();
+    const computerSelection = getComputerChoice();
   if (playerSelection === "paper" && computerSelection === "rock") {
     return `You won! ${playerSelection} beats ${computerSelection}! keep going!`;
   }
